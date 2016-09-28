@@ -1,0 +1,21 @@
+{
+  "name": "angularpt1-homework",
+  "version": "0.0.1",
+  "authors": [
+    "vplusk"
+  ],
+  "license": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  }
+}

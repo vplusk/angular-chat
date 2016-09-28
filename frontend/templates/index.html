@@ -1,0 +1,21 @@
+
+<div ng-hide="show">
+	<form name="myForm">
+		<h3>Please, tell us your name to enter the chat</h3>
+		<input type="text" placeholder="Your name" id="nameInput" name="input" ng-model="userName" required>
+		<input type="button" value="OK" id="nameButton" ng-click="show=true" ng-disabled="myForm.input.$invalid">
+		<br><span style="color: red; margin-left: 120px;" ng-show="myForm.input.$invalid">Name is required</span>
+	</form>	
+</div>
+<div class="chat-content" ng-show="show">
+	<h2>You are welcome, {{ this.userName }}</h2>
+	<ul class="chat-history">
+		<li ng-repeat="value in messages">
+			<span style="font-weight: bold">{{ value.name}}:</span> {{ value.text }}
+		</li>
+	</ul>
+	<div>
+		<textarea id="text" cols="30" rows="10" ng-model="userMessage"></textarea>
+		<input type="button" value="Send" id="textSubmit" ng-click="sendMessage()">
+	</div>
+</div>
